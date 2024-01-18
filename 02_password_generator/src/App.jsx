@@ -33,8 +33,8 @@ function App() {
     password_ref.current.select();
     password_ref.current.setSelectionRange(0,9);
     //  will select the lemited values
-    window.navigator.clipboard.writeText(password)
-  },[password])
+    window.navigator.clipboard.writeText(password_ref.current.value.slice(0,1));
+  },[password_ref])
 
   // useEffect( callback , dependancy_array)
   useEffect( () => {
